@@ -14,6 +14,10 @@ public class CallMap extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_call_map);
 
+    }// Main Method
+
+    public void callMap(View view){
+
         EditText lattitude = (EditText) findViewById(R.id.mapLat);
         EditText longtitude = (EditText) findViewById(R.id.mapLong);
 
@@ -25,11 +29,6 @@ public class CallMap extends AppCompatActivity {
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
         //mapIntent.setPackage("com.google.android.apps.maps");  //ใช้ไม่ได้กับ Genimotion
         startActivity(mapIntent);
-
-
-    }// Main Method
-
-    public void callMap(View view){
 
     }//End callMap
 
