@@ -14,13 +14,16 @@ public class CallMap extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_call_map);
 
-        EditText Lattitude = (EditText) findViewById(R.id.mapLat);
-        EditText Longtitude = (EditText) findViewById(R.id.mapLong);
+        EditText lattitude = (EditText) findViewById(R.id.mapLat);
+        EditText longtitude = (EditText) findViewById(R.id.mapLong);
+
+        String lat = lattitude.getText().toString().trim();
+        String lng = longtitude.getText().toString().trim();
 
         Uri location = Uri.parse("http://maps.google.com/maps?q=loc:13.759774,100.541484");
 
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, location);
-        mapIntent.setPackage("com.google.android.apps.maps");  //ใช้ไม่ได้กับ Genimotion
+        //mapIntent.setPackage("com.google.android.apps.maps");  //ใช้ไม่ได้กับ Genimotion
         startActivity(mapIntent);
 
 
